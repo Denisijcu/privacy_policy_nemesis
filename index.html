@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NÉMESIS: Cyber Defense Suite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace; /* Fuente estilo consola/hacker */
+            line-height: 1.6;
+            color: #00ff41; /* Verde Neón para texto */
+            background-color: #050505; /* Fondo Negro Cyber */
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #0a0f14; /* Fondo oscuro ligeramente diferente */
+            border: 2px solid #00ff41; /* Borde Verde Neón */
+            border-radius: 4px; /* Bordes menos redondeados, más técnicos */
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2); /* Resplandor verde */
+            overflow: hidden;
+        }
+
+        .header {
+            background: #000;
+            border-bottom: 2px solid #00ff41;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #00ff41;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #00e5ff; /* Cian Neón */
+            font-weight: bold;
+        }
+
+        .app-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .effective-date {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 15px;
+            border-left: 4px solid #00ff41;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #00e5ff; /* Cian para títulos */
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #333;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #ccc; /* Texto gris claro para lectura */
+        }
+
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+
+        .highlight-warn {
+            background: rgba(255, 0, 60, 0.1); /* Fondo rojo muy suave */
+            padding: 20px;
+            border: 1px solid #ff003c; /* Borde Rojo Neón */
+            border-left: 4px solid #ff003c;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        .highlight-safe {
+            background: rgba(0, 255, 65, 0.05);
+            padding: 20px;
+            border: 1px solid #00ff41;
+            border-left: 4px solid #00ff41;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: #111;
+            padding: 20px;
+            border: 1px dashed #00e5ff;
+            margin: 20px 0;
+            color: #ccc;
+        }
+
+        .footer {
+            background: #000;
+            border-top: 2px solid #00ff41;
+            color: #555;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Enlaces */
+        a {
+            color: #00e5ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                border: none;
+                border-top: 2px solid #00ff41;
+                border-bottom: 2px solid #00ff41;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">🛡️</div>
+            <h1>NÉMESIS</h1>
+            <p>CYBER DEFENSE SUITE // PRIVACY PROTOCOL</p>
+        </div>
+
+        <div class="content">
+            <div class="effective-date">
+                <strong>>>> SYSTEM TIMESTAMP:</strong> Effective Date: December 2025
+            </div>
+
+            <div class="section">
+                <h2>1. MISSION STATEMENT & PRIVACY</h2>
+                <p><strong>NÉMESIS: Cyber Defense Suite</strong> is a professional-grade security tool designed for network analysis, threat detection, and forensic documentation. We respect user privacy and data sovereignty. This policy outlines how data is handled within our isolated environment.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. DATA COLLECTION & USAGE</h2>
+                <p>NÉMESIS operates primarily as a local tool, but certain features require data processing to function:</p>
+                
+                <div class="highlight-safe">
+                    <p><strong>LOCAL DATA (Stored on Device):</strong></p>
+                    <ul>
+                        <li><strong>Attack Logs (The Vault):</strong> All detected threats, payloads, and forensic reports are stored in a local SQLite database on your device. We do not have access to this database.</li>
+                        <li><strong>Configuration:</strong> User preferences (API URLs, Stealth Mode settings) are stored locally via SharedPreferences.</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-warn">
+                    <p><strong>DATA TRANSMISSION (External Services):</strong></p>
+                    <p>To provide advanced analysis, specific data snippets (payloads) are transmitted securely to third-party services only when initiated by the user or automated defense protocols:</p>
+                    <ul>
+                        <li><strong>AI Analysis (KRATOS Engine):</strong> Attack payloads are sent to Large Language Model providers (e.g., Groq, Google Gemini) to generate tactical reports.</li>
+                        <li><strong>Network Traffic:</strong> The "Honeypot" feature listens on local ports (e.g., 8080) to detect incoming traffic from your local network.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>3. APP PERMISSIONS</h2>
+                <p>NÉMESIS requires specific Android permissions to operate its defensive capabilities:</p>
+                <ul>
+                    <li><strong>🌐 INTERNET (Full Network Access):</strong> Required to communicate with the Neural Core (AI API) and generate blockchain evidence hashes.</li>
+                    <li><strong>📡 ACCESS_NETWORK_STATE / WIFI_STATE:</strong> Required to inspect local network conditions and display your IP address for the Honeypot sensor.</li>
+                    <li><strong>🔔 VIBRATE:</strong> Used for haptic feedback alerts when a threat is detected (unless Stealth Mode is active).</li>
+                    <li><strong>📂 FOREGROUND_SERVICE (If applicable):</strong> To keep the Honeypot sensor running actively in the background.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. THIRD-PARTY SERVICES</h2>
+                <p>NÉMESIS utilizes the following third-party infrastructure for its intelligence capabilities. Please review their privacy policies:</p>
+                <ul>
+                    <li><strong>AI Providers (Groq / Google):</strong> Used for processing text payloads to generate security analysis. Data sent is limited to the captured attack string.</li>
+                    <li><strong>Hugging Face (Server Infrastructure):</strong> Used to host the backend logic for traffic analysis.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. SECURITY & ENCRYPTION</h2>
+                <p>We employ military-grade standards to protect your data:</p>
+                <ul>
+                    <li><strong>HTTPS/TLS:</strong> All communication between the app and the Neural Core is encrypted.</li>
+                    <li><strong>Blockchain Forensics:</strong> Threat evidence is hashed (SHA-256) to ensure integrity, though the hash itself does not contain personally identifiable information (PII).</li>
+                    <li><strong>No Cloud Sync:</strong> We do not maintain a cloud database of your logs. If you uninstall the app, your Vault data is permanently deleted.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>6. CHILDREN'S PRIVACY</h2>
+                <p>NÉMESIS is a professional security tool not intended for children under 13. We do not knowingly collect data from children.</p>
+            </div>
+
+            <div class="section">
+                <h2>7. CHANGES TO PROTOCOL</h2>
+                <p>We may update this policy to reflect upgrades in our defense systems. Continued use of the "Uplink" implies acceptance of updated protocols.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. CONTACT COMMAND</h2>
+                <div class="contact-info">
+                    <p>If you have questions regarding this classified protocol, contact the developer:</p>
+                    <br>
+                    <p>📧 <strong>Secure Email:</strong> [PON TU EMAIL AQUÍ]</p> <p>🛡️ <strong>System:</strong> NÉMESIS Cyber Defense</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>NÉMESIS SYSTEM V.2.0</strong></p>
+            <p>Authorized for Professional Use Only.</p>
+            <p>© 2025 Denisijcu Development Ops</p>
+        </div>
+    </div>
+</body>
+</html>
